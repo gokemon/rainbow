@@ -1,0 +1,118 @@
+
+
+// Header - Color
+.header-container {
+    .dropdown {
+        color: $text-color;
+        a {
+            color: $text-color;
+            &:hover {
+                color: $text-color;
+            }
+        }        
+    }
+    &.bg-light {
+        color: $text-color;
+
+        .input-group-addon,
+        a {
+            color: $text-color;
+            &:hover {
+                color: $text-color;
+            }
+        }
+    }
+    &.bg-dark {
+        color: $bright;
+
+        .input-group-addon,
+        a {
+            color: $bright;
+            &:hover {
+                color: $bright;
+            }
+        }
+    }
+    &.bg-primary,
+    &.bg-success,
+    &.bg-info,
+    &.bg-info-alt,
+    &.bg-warning,
+    &.bg-danger {
+        color: $bright;
+        a {
+            color: $bright;
+            &:hover {
+                color: $bright;
+            }
+        }
+        
+        .input-group-addon { color: $gray-lighter; }
+        ::-webkit-input-placeholder { color: #eaeaea; }
+        :-moz-placeholder { color: #eaeaea; } // Firefox 18-
+        ::-moz-placeholder {  color: #eaeaea; } // Firefox 19+
+        :-ms-input-placeholder {color: #eaeaea; }   
+
+        .top-nav .nav-left > li > a .badge {
+            color: #eaeaea;
+        }
+    }
+
+    // 
+    > .top-header {
+        .logo {
+            border: 1px solid rgba(0,0,0,.1);
+            @media (min-width: $screen-sm-min) {
+                border: 0;
+            }
+            &.bg-light {
+                color: $dark;
+                a {
+                    color: $dark;
+                    &:hover {
+                        color: $dark;
+                    }
+                }
+
+                & + .menu-button {
+                    .icon-bar {
+                        background-color: $text-color;
+                    }
+
+                    &:hover {
+                        .icon-bar {
+                            background-color: $reverse;
+                        }                        
+                    }
+                }
+            }
+
+            &.bg-dark,
+            &.bg-primary,
+            &.bg-success,
+            &.bg-info,
+            &.bg-info-alt,
+            &.bg-warning,
+            &.bg-danger {
+                color: $bright;
+                a {
+                    color: $bright;
+                    &:hover {
+                        color: $bright;
+                    }
+                }
+            }        
+        }
+    }
+
+    // Text color in dropdown-menu (not dropdown) is always the same
+    .dropdown-menu {
+        color: $text-color;
+        a {
+            color: $text-color;
+            &:hover {
+                color: $text-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,109 @@
+.body-auth {
+    #content {
+        background-color: $body-bg;
+        background: url("#{$image_path}background/1.jpg") no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+}
+
+
+.page-signin,
+.page-signup,
+.page-forgot,
+.page-confirm-email {
+
+    .wrapper {
+        margin-top: 50px;
+        padding: 0 10px;
+        @media (min-width: $screen-sm) {
+            margin-top: 150px;
+        }
+    }
+
+    .main-body {
+        max-width: 480px;
+        margin: 10px auto;
+    }
+    .body-inner {
+        position: relative;
+        padding: 0;
+        background-color: #fff;
+        border-radius: $border-radius-large;
+        box-shadow: 0 0 1px #e1e1e1;
+        overflow: hidden;
+
+        > footer {
+            background-color: #F7F7F7;
+            padding: 16px 20px;
+            color: $text-color;
+            text-align: center;
+            font-size: $font-size-small;
+            border-top: 1px solid #e1e1e1;
+            a {
+                color: $text-color;
+            }
+            .divider-h {
+                border-right: 1px solid #ccc;
+                margin: 0 15px;
+            }
+        }
+    }
+
+
+    ul.rainbow-border {
+        list-style: none;
+        width: 100%;
+        font-size: 0;
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline-block;
+            width: 20%;
+            height: 6px;
+        }
+    }
+
+    h1 {
+        font-weight: normal;
+        color: $text-color;
+        font-size: 36px;
+        margin: 35px 0;
+        a {
+            color: $text-color;
+            text-decoration: none;
+        }
+    }
+
+    .additional-info {
+        padding: 0 50px;
+    }
+
+    .form-container {
+        padding: 20px 45px; // =30px + 15px
+    }
+
+    .form-group {
+        position: relative;
+
+        .btn-icon-lined {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+        }
+
+        .input-lg {
+            padding: 10px 30px;
+        }
+    }
+
+}
+
+.page-confirm-email {
+    .glyphicon-envelope {
+        font-size: 86px;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,86 @@
+
+// Datepicker
+.ui-datepicker {
+    table {
+        margin: 0 5px;
+        th,
+        td {
+            padding: 1px;
+
+            .active span {
+                color: $reverse;
+            }
+        }
+    }
+
+    > .dropdown-menu {
+        &:focus,
+        *:focus {
+            outline: none;
+        }
+    }
+}
+
+
+// Timepicker
+.ui-timepicker {
+    td {
+        padding: 1px;
+    }
+}
+
+
+// Rating
+.ui-rating {
+    &:hover {
+        cursor: pointer;
+    }
+
+    .glyphicon {
+        margin-right: 2px;
+    }
+
+    // when active
+    .glyphicon-star {
+        color: $brand-primary;
+    }
+    &.ui-rating-success {
+        .glyphicon-star {
+            color: $brand-success;
+        }        
+    }
+    &.ui-rating-info {
+        .glyphicon-star {
+            color: $brand-info;
+        }        
+    }
+    &.ui-rating-warning {
+        .glyphicon-star {
+            color: $brand-warning;
+        }        
+    }
+    &.ui-rating-danger {
+        .glyphicon-star {
+            color: $brand-danger;
+        }        
+    }
+}
+
+// Typeahead
+.ui-typeahead {
+    > .dropdown-menu {
+        right: ($grid-gutter-width/2);
+    }
+}
+
+.ui-rating {
+    &:focus {
+        outline: none;
+    }
+
+    > i {
+        &:focus {
+            outline: none;
+        }
+    }
+}

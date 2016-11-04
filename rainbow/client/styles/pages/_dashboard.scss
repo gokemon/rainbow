@@ -1,0 +1,20 @@
+.page-dashboard {
+    .mini-box {
+        padding: 30px 25px;
+    }
+
+    .panel-box {
+        margin-bottom: 0;
+        .panel-top .divider-xl {
+            margin: 100px 0;
+        }
+
+        .panel-bottom {
+            padding: 17px 10px;
+        }
+    }
+
+    .table td {
+        vertical-align: middle;
+    }
+}

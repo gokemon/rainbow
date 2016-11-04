@@ -1,0 +1,13 @@
+.layout-boxed {
+    > .header-container {
+        .top-header {
+            max-width: $boxed_layout_width;
+            margin: 0 auto;
+        }
+    }
+
+    > .main-container {
+        max-width: $boxed_layout_width;
+        margin: 0 auto;
+    }
+}

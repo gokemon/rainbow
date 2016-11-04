@@ -1,0 +1,111 @@
+
+html,
+body,
+#app-container {
+    position: relative;
+    min-height: 100%; // important!
+    height: 100%; // important!
+}
+
+// default
+.app {
+    position: relative;
+    min-height: 100%; // important!
+    height: 100%; // important!
+
+    > .header-container {
+        &.header-fixed {
+            position: fixed;
+            right: 0;
+            left: 0;
+            z-index: $zindex-navbar-fixed;
+
+            & + .main-container {
+                padding-top: $header_height * 2;
+                @media (min-width:$screen-sm) {
+                    padding-top: $header_height;
+                }
+            }
+
+        }
+
+        .top-header {}
+    }
+
+    > .main-container {
+        position: relative;
+        min-height: 100%; // important!
+        &:before { // content container background for boxed layout
+            content: " ";
+            line-height: 0;
+            z-index: -2; // so that it is beneath sidebar
+            position: absolute;
+            display: block;
+            width: 100%;
+            max-width: inherit; //
+            top: 0;
+            bottom: 0;
+            background-color: $main_container_bg;
+            box-shadow: 0 0 2px rgba(0,0,0,.2);
+        }
+
+        > .nav-vertical {
+            &:before {
+                left: 0;
+            }
+        }
+
+        > .nav-container {
+            display: none;
+            z-index: 11; // should be highter than top header
+            position: static;
+            float: left;
+            width: 220px;
+            // border-width: 0 1px 0 0;
+            // border-style: solid;
+            // border-color: darken($sidebar_bg, 10%);
+            @media (min-width:$screen-sm) {
+                display: block;
+            }
+            &:before {
+                z-index: -1; // so that it is beneath top header
+                content: " ";
+                line-height: 0;
+                position: absolute;
+                display: block;
+                top: 0;
+                bottom: 0;
+                width: inherit;
+                background-color: inherit;
+                border-width: inherit;
+                border-style: inherit;
+                border-color: inherit;
+            }
+            &.nav-fixed {
+                position: fixed;
+                top: $header_height * 2;
+                bottom: 0;
+                float: none;
+                @media (min-width:$screen-sm) {
+                    top: $header_height;
+                }
+            }
+
+
+        }
+
+        > .content-container {
+            overflow: hidden;
+            min-height: 100%;
+            margin-left: 0;
+            // @include transition(none);
+            @media (min-width:$screen-sm) {
+                margin-left: 220px;
+            }
+        }
+
+    }
+
+}
+
+

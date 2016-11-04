@@ -1,0 +1,38 @@
+body {
+    background: $main_container_bg;
+}
+
+// = For fullscreen pages = 
+.body-wide {
+    // hide header and sidebar
+    #header,
+    #nav-container {
+        display: none;
+    }
+
+    #content {
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        // bottom: 0; // Fix long content can't scroll (overflow hidden) problem
+        margin: 0;
+        padding-bottom: 50px;
+    }
+
+    // Hide margins that caused by opened off-canvas nav
+    .on-canvas #content {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    // Fix long content can't scroll (overflow hidden) problem caused by opened off-canvas nav
+    .on-canvas .main-container {
+        overflow: auto;
+    }
+
+    // Overrides boxed layout
+    .layout-boxed > .main-container {
+        max-width: 100%;
+    }
+}

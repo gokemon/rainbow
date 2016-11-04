@@ -1,0 +1,197 @@
+$light_bg_nav_border: #e5e5e5;
+$dark_bg_nav_border: lighten($dark, 6%);
+
+
+// Override header 
+.app.nav-collapsed-min {
+    .top-header {
+        .logo {
+            @media (min-width: $screen-sm) {
+                width: 50px; // 49 + 1 (border)
+            } 
+        }
+    }
+}
+
+// 
+.nav-container {
+
+     &.bg-light {
+        .nav {
+            > li {
+                &.open {
+                    > a {
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            border-color: $light_bg_nav_border; // overrides Bootstrap 3.3.x
+                        }
+                    }
+                }
+            }
+            li > a {
+                border-bottom: 1px solid $light_bg_nav_border;
+
+                > i {
+                    border-right: 1px solid $light_bg_nav_border;
+                }
+
+            }
+            ul li {
+                &:last-child > a {
+                    border-bottom: 1px solid $light_bg_nav_border;
+                }
+            }
+        }
+     }
+     &.bg-dark {
+        .nav {
+            > li {
+                &.open {
+                    > a {
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            border-color: $dark_bg_nav_border; // overrides Bootstrap 3.3.x
+                        }
+                    }
+                }
+            }
+            li > a {
+                border-bottom: 1px solid $dark_bg_nav_border;
+
+                > i {
+                    border-right: 1px solid $dark_bg_nav_border;
+                }
+            }
+            ul li {
+                &:last-child > a {
+                    border-bottom: 1px solid $dark_bg_nav_border;
+                }
+            }
+        }
+    }
+
+    &.bg-white,
+    &.bg-dark {
+        .nav {
+            // level 4 menu
+            ul ul ul li {
+                > a {
+                    border: 0 !important;
+                    > i { border: 0 !important; }
+                }
+            }
+        }
+    }
+
+    .nav {
+        li {
+            > a {
+
+                > i {
+                    position: relative;
+                    display: block;
+                    float: left;
+                    width: 50px;
+                    text-align: center;
+                }
+            }
+
+        }
+
+        // 
+        > li {
+            &.open,
+            &.active,
+            &:hover {
+                > a {
+                    // background-color: $link_active_bg;
+                    > i {
+                        &:before {
+                            color: $reverse;
+                        }
+                        .icon-bg {
+                            left: 0;
+                        }
+                    }
+                }
+            }
+
+            > a {
+                height: 50px;
+
+                > i {
+                    height: 50px;
+                    line-height: 50px;
+                    margin: -15px 10px -15px -15px;
+                    // transition: none;
+                    &:before {
+                        position: relative;
+                        z-index: 1;
+                    }
+                    .icon-bg {
+                        position: absolute;
+                        z-index: 12;
+                        z-index: 0;
+                        left: -47px;
+                        width: 100%;
+                        top: 0;
+                        bottom: 0;
+                        transition: left .2s ease-in-out;
+                    }
+                }
+            }
+
+        }
+
+
+
+        // sub ul
+        ul {
+            li {
+                > a {
+                    > i {
+                        height: 44px;
+                        line-height: 44px;
+                        margin: -12px 10px -12px -25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Collapsed nav
+@media (min-width: $screen-sm) {
+    .app.nav-collapsed-min {
+        #nav-container {
+            width: 50px;
+        }
+        .content-container {
+            left: 50px;
+        }
+        #nav {
+            > li {
+                width: 50px;
+                > a {
+                    padding: 0;
+                    > i {
+                        font-size: 14px;
+                        &:before {
+                            color: $reverse;
+                        }
+                        > .icon-bg {
+                            left: 0;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .nav-container .nav > li > a > i {
+            border-right: 0;
+        }
+    }
+}

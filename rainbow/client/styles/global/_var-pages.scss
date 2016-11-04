@@ -1,0 +1,52 @@
+
+// Layout
+$boxed_layout_width:    1200px;
+$screen-sm-max:         ($screen-sm - 1);
+
+// Top header
+$header_height:             50px;           //** 
+$header_line_height:        20px;           //** line-height of the header text
+$header_container_bg:       $dark;
+$header-border:             rgba(255,255,255,.06);
+$header_link_color:         #aaa;
+
+// Main container, like body_bg
+$main_container_bg:         #eaeaea;
+
+
+
+// = Sidebar, default is vertical =
+$nav-transition_duration: .25s;
+
+// Light background sidebar
+$light_bg_link_hover_bg:             transparent; //#f6f6f6;
+$light_bg_link_hover_color:          $text-color;
+$light_bg_link_active_bg:            #f6f6f6;
+$light_bg_link_active_color:         darken($text-color, 10%);
+$light_bg_link_open_bg:              $light_bg_link_active_bg;      // vertical nav only
+$light_bg_link_open_color:           $light_bg_link_active_color;   // vertical nav only
+
+$light_bg_sub_nav_bg:                $light_bg_link_active_bg;
+$light_bg_sub_link_active_color:     $brand-primary;
+
+$light_bg_sub2_nav_bg:               #eee;
+$light_bg_sub2_link_active_color:    $brand-primary;
+
+$light_bg_sub3_nav_bg:               #ddd;
+
+
+// Dark background sidebar
+$dark_bg_link_hover_bg:              transparent;
+$dark_bg_link_hover_color:           rgba(255,255,255,.8);
+$dark_bg_link_active_bg:             darken($dark, 3%);
+$dark_bg_link_active_color:          rgba(255,255,255,.8);
+$dark_bg_link_open_bg:               $dark_bg_link_active_bg;      // vertical nav only
+$dark_bg_link_open_color:            $dark_bg_link_active_color;   // vertical nav only
+
+$dark_bg_sub_nav_bg:                 $dark_bg_link_active_bg;
+$dark_bg_sub_link_active_color:      $dark_bg_link_active_color;
+
+$dark_bg_sub2_nav_bg:                darken($dark_bg_sub_nav_bg, 5%);
+$dark_bg_sub2_link_active_color:     $brand-primary;
+
+$dark_bg_sub3_nav_bg:                darken($dark_bg_sub2_nav_bg, 5%);
